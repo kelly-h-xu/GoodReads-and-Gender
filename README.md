@@ -1,5 +1,5 @@
 # GoodReads-and-Gender
-An NLP Analysis of Gender Perceptions in Book Reviews, 2006-2017  
+***An NLP Analysis of Gender Perceptions in Book Reviews, 2006-2017***
 
 We analyze book review data collected from 2006 to 2017 using Natural Language Processing techniques and find substantial evidence that book reviewers associate gendered words (viewing gender as a male or female binary for the purposes of this study) with certain gender stereotypes, and that these associations, along with the strength of association, vary by genre. We also examine the relationship between male or female centric reviews and their distribution of ratings, but find no significant correlation relating higher or lower ratings to a specific gender. 
 
@@ -11,7 +11,7 @@ We analyze book review data collected from 2006 to 2017 using Natural Language P
 ➡️ Limitations/Disclaimer: A big limitation in our linguistic analysis was viewing gender as a binary. Another significant limitation of our analysis was that we primarily confined ourselves to pronouns like she, him, his, hers, etc. to measure gender. However, there were many reviews in which these words did not appear, as review posters opted to call characters by their names instead.   
 	                  Our most obvious limitation is that cosine similarity is not a perfect measure of linguistic similarity, as language does not always translate beautifully to math. While vectorization of words provides a stable algorithm to find connections between mathematical representations, linguistics have greater human nuance behind them that machines cannot always capture. Furthermore, cosine similarity only captures a measure of similarity for the orientation of vectors, and it does not capture magnitude (ie. distance). Future work should also study the euclidean distance between word vectors to better understand how similar words are according to vectorization by looking at both the orientation and magnitude of vectors. 
 
-### Research Landscape + Research Questions
+## Research Landscape + Research Questions
 Despite pushes to diversify literature and calls for better representation of female characters, many prominent authors still face scorn for depicting characters as gender stereotypes with little depth. We wanted to see if gender bias was prevalent in the language GoodReads reviewers used, studying what common stereotypes were invoked and how strong the linguistic associations between gender and stereotypes were in reviews and how these varied by genre. We believe these findings could contribute to ongoing discourse surrounding publishing and gender stereotypes while also offering greater context to the biases present in reviews we rely on for book selection, which may not be immediately apparent.
 
 For this project, our main research questions were:
@@ -19,7 +19,7 @@ For this project, our main research questions were:
 2. What differences exist in the association of literary stereotypes with certain genders when we cross compare stereotypical associations with opposite genders across genres? 
 3. How do ratings differ for female-centered vs. male-centered reviews per genre?
 
-### Data 
+## Data 
 For our project, we are using data from the “Goodreads Book Graph Datasets” (https://mengtingwan.github.io/data/goodreads.html) collection. The collection includes ~15 million reviews from 2006-2017, scraped from the GoodReads website and made publicly available by Mengting Wan, PhD, a Senior Research Scientist at Microsoft. These reviews were those publicly viewable from GoodReads users and all IDs were anonymized. These JSON files have breakdowns on authorIDs, timestamps of reviews, sentence content of reviews, userIDs, bookIDs, and the overall 5-star rating an individual gave of the book. All 15 million reviews are in the file named goodreads_reviews_dedup.json.gz, and these reviews are also split into smaller datasets by book genre (children's literature, poetry, romance, comics, or mystery/thriller/crime). We segmented our data by genre, both to save computational power (the romance dataset alone had ~3.5 million entries), as well as for the purposes of our analysis. We filtered our data with the langdetect library to filter out non-English reviews.
 
 ## Methods 
