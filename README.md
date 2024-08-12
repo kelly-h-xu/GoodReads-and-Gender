@@ -2,9 +2,9 @@
 An NLP Analysis of Gender Perceptions in Book Reviews, 2006-2017
 
 ## Project Overview
-👏 This project was created with Sarah Konrad, Sarah Ouda, Unzila Sakina, and Joyce Thomas. \\
-💻 Text Vectorization + Deep Learning using Word2Vec, NLTK Toolkit, and Sci-Kit Learn. Data wrangling and cleaning using Pandas. Data visualization using Seaborn. \\
-➡️ Limitations/Disclaimer: 
+👏 This project was created with Sarah Konrad, Sarah Ouda, Unzila Sakina, and Joyce Thomas. \
+💻 Text Vectorization + Deep Learning using Word2Vec, NLTK Toolkit, and Sci-Kit Learn. Data wrangling and cleaning using Pandas. Data visualization using Seaborn. \
+➡️ Limitations/Disclaimer: \
 
 ### Research Landscape + Research Questions
 Despite pushes to diversify literature and calls for better representation of female characters, many prominent authors still face scorn for depicting characters as gender stereotypes with little depth. We wanted to see if gender bias was prevalent in the language GoodReads reviewers used, studying what common stereotypes were invoked and how strong the linguistic associations between gender and stereotypes were in reviews and how these varied by genre. We believe these findings could contribute to ongoing discourse surrounding publishing and gender stereotypes while also offering greater context to the biases present in reviews we rely on for book selection, which may not be immediately apparent.
