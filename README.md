@@ -2,8 +2,8 @@
 An NLP Analysis of Gender Perceptions in Book Reviews, 2006-2017
 
 ## Project Overview
-👏 This project was created with Sarah Konrad, Sarah Ouda, Unzila Sakina, and Joyce Thomas. 
-💻 Text Vectorization + Deep Learning using Word2Vec, NLTK Toolkit, and Sci-Kit Learn. Data wrangling and cleaning using Pandas. Data visualization using Seaborn. 
+👏 This project was created with Sarah Konrad, Sarah Ouda, Unzila Sakina, and Joyce Thomas. \\
+💻 Text Vectorization + Deep Learning using Word2Vec, NLTK Toolkit, and Sci-Kit Learn. Data wrangling and cleaning using Pandas. Data visualization using Seaborn. \\
 ➡️ Limitations/Disclaimer: 
 
 ### Research Landscape + Research Questions
