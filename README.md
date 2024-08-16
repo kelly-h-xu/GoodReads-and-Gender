@@ -12,12 +12,6 @@ We analyze book review data collected from 2006 to 2017 using Natural Language P
 
    Our most obvious limitation is that cosine similarity is not a perfect measure of linguistic similarity, as language does not always translate beautifully to math. While vectorization of words provides a stable algorithm to find connections between mathematical representations, linguistics have greater human nuance behind them that machines cannot always capture. Furthermore, cosine similarity only captures a measure of similarity for the orientation of vectors, and it does not capture magnitude (ie. distance). Future work should also study the euclidean distance between word vectors to better understand how similar words are according to vectorization by looking at both the orientation and magnitude of vectors. 
 
-## Research Questions
-For this project, our main research questions were:
-1. What words/qualities that are common in literary stereotypes and character tropes do GoodReads reviewers attribute or associate with male and female characters across genres? 
-2. What differences exist in the association of literary stereotypes with certain genders when we cross compare stereotypical associations with opposite genders across genres? 
-3. How do ratings differ for female-centered vs. male-centered reviews per genre?
-
 ## Data 
 For our project, we are using data from the “Goodreads Book Graph Datasets” (https://mengtingwan.github.io/data/goodreads.html) collection. The collection includes ~15 million reviews from 2006-2017, scraped from the GoodReads website and made publicly available by Mengting Wan, PhD, a Senior Research Scientist at Microsoft. These reviews were those publicly viewable from GoodReads users and all IDs were anonymized. These JSON files have breakdowns on authorIDs, timestamps of reviews, sentence content of reviews, userIDs, bookIDs, and the overall 5-star rating an individual gave of the book. All 15 million reviews are in the file named goodreads_reviews_dedup.json.gz, and these reviews are also split into smaller datasets by book genre (children's literature, poetry, romance, comics, or mystery/thriller/crime). We segmented our data by genre, both to save computational power (the romance dataset alone had ~3.5 million entries), as well as for the purposes of our analysis. We filtered our data with the langdetect library to filter out non-English reviews.
 
