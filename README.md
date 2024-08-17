@@ -13,8 +13,8 @@ We analyze book review data collected from 2006 to 2017 using Natural Language P
    Another limitation is that cosine similarity is not a perfect measure of linguistic similarity, as the algorithm cannot fully capture the nuance behind human language. Furthermore, cosine similarity only captures a measure of similarity for the orientation of vectors, and it does not capture magnitude (ie. distance). Future work should also study the euclidean distance between word vectors to better understand how similar words are according to vectorization by looking at both the orientation and magnitude of vectors. 
 
 ## Project Video
-<a href="https://duke.box.com/s/vluzcj5pwqwcj332jd0l3wzox5mwa3oj">
-    <img src="https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/goodreads_gender_video_thumbnail.png" alt="project video" width="400" height="200"/>
+<a href="https://duke.box.com/s/vluzcj5pwqwcj332jd0l3wzox5mwa3oj" target="_blank">
+    <img src="https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/goodreads_gender_video_thumbnail.png" alt="project video" width="400" height="250"/>
 </a>
 
 ## Data 
