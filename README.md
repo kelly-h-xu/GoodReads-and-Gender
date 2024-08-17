@@ -14,7 +14,7 @@ We analyze book review data collected from 2006 to 2017 using Natural Language P
 
 ## Project Video
 <a href="https://duke.box.com/s/vluzcj5pwqwcj332jd0l3wzox5mwa3oj">
-    <img src="https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/goodreads_gender_video_thumbnail.png" alt="project video" width="400" height="300"/>
+    <img src="https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/goodreads_gender_video_thumbnail.png" alt="project video" width="400" height="200"/>
 </a>
 
 ## Data 
