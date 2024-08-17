@@ -13,6 +13,9 @@ We analyze book review data collected from 2006 to 2017 using Natural Language P
    Another limitation is that cosine similarity is not a perfect measure of linguistic similarity, as the algorithm cannot fully capture the nuance behind human language. Furthermore, cosine similarity only captures a measure of similarity for the orientation of vectors, and it does not capture magnitude (ie. distance). Future work should also study the euclidean distance between word vectors to better understand how similar words are according to vectorization by looking at both the orientation and magnitude of vectors. 
 
 ## Project Video
+<a href="https://duke.box.com/s/vluzcj5pwqwcj332jd0l3wzox5mwa3oj">
+    <img src="https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/goodreads_gender_video_thumbnail.png" alt="project video" width="480" height="360"/>
+</a>
 [![Project Video](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/goodreads_gender_video_thumbnail.png)](https://duke.box.com/s/vluzcj5pwqwcj332jd0l3wzox5mwa3oj)
 ## Data 
 For our project, we are using data from the “Goodreads Book Graph Datasets” (https://mengtingwan.github.io/data/goodreads.html) collection. The collection includes ~15 million reviews from 2006-2017, scraped from the GoodReads website and made publicly available by Mengting Wan, PhD, a Senior Research Scientist at Microsoft. These reviews were those publicly viewable from GoodReads users and all IDs were anonymized.   
