@@ -56,16 +56,20 @@ To recreate our analysis, separately download the reviews datasets by genre (poe
 **How Much More Are Men Associated With Male Stereotypes, Than Women Are? (Romance Genre)**
 ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/romance_compare_male_to_female_bargraph.png)  
 
+## Results
+### Cross-Genre Analysis
    Visually analyzing genre-specific cosine similarity graphs, we found that association of gender with stereotypes varied somewhat by book genre. For our purposes, we considered a difference in cosine similarity greater than or equal to 0.05 to be significant evidence of correlation in a certain direction within the linguistic associations for a given genre, as it means that a minimum of a 5% greater cosine similarity was present, and such a percentage increase is not trivial given that thousands of words come between even a 0.01 cosine similarity increase given the size of vocabularies our Word2Vec models contained (each with a minimum of 80k words). This table shows the words that we observed a significant correlation in. 
-[insert screenshot of the findings]
+![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/cross_genre_analysis_1.png)
+![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/cross_genre_analysis_2.png) 
 
+### All Genres Analysis
    Performing the analysis on the entire dataset of gendered words and stereotypes across genres, and now designating a mean cosine similarity greater than or equal to 0.4 as showing strong correlation in either direction, we found that women are most strongly correlated with stereotypes of: witch, damsel, maid, and beautiful. Men are most strongly correlated with stereotypes of: heroic, soldier, hero, charismatic, and honorable (see appendix for the exact correlation numbers). This indicates that there are significant linguistic associations between anticipated gender stereotypes in literature and words indicating gender in GoodsReads reviews across genres. 
    **Overall Correlation of female stereotypes and female words**  
    ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/overall_compare_female_to_male_bargraph.png)  
    **Overall Correlation of male stereotypes and male words**  
   ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/overall_compare_female_to_male_bargraph.png)  
 
-### Analyzing Impact of Gender Stereotypes on Ratings 
+## Analyzing Impact of Gender Stereotypes on Ratings 
 We wanted to get a sense of the distribution of ratings depending on whether or not a review was identified as male or female centered. In order to determine whether a review was male or female-centered, we developed a classification process utilizing the language of each review. We began by performing preliminary pre-processing on the text data, replacing the common contractions “she'll", "she'd", "he'll", and "he'd" with “she” and “he”. We then tokenized reviews by splitting them into a list of words and filtered for words that contain gendered language. Specifically, we searched for the presence of words such as "he", "him", "his", "mr", "her", "she", "hers", and "mrs". Within this filtered dataset, we standardized text by removing all forms of string punctuation and converting all words to lowercase.   
 
 Next, we took the count of each gendered word within the tokenized review and developed a criteria based on weights to determine what constituted for a male/female-centered review. Gendered words that were unlikely to be caused by a typo, such as “him” and “his,” or “her” and “hers,” were assigned a higher weight of 2. Words that could easily be misspelled, such as “he” vs “her” or “mr” vs “mrs,” were assigned a lower weight of 1. We split the gendered words into male vs female lists (["he", "him", "his", "mr"] and ["her", "she", "hers", "mrs"]) and multiplied the occurrence of each word by its weight, resulting in two variables: a female and a male weight for each review. The final step was to simply classify the reviews based on which weight was higher. For example, if a review had a higher female weight, it would get classified as “0” (for female), otherwise as “1” (for male).   
