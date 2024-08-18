@@ -31,8 +31,10 @@ To recreate our analysis, separately download the reviews datasets by genre (poe
 ### Preliminary Data Analysis: Analyzing Cosine Similarity 
    To discover differences in association, we then created heatmaps that calculated the cosine similarities between 11 of our gender stereotype words to 11 gender words at a time. Cosine similarity is a measure of the similarity of orientation of two vectors of words between [-1,1], meaning that the more similar the vector, the higher the cosine similarity, and therefore the closer in meaning/the more often two words are used in similar contexts. Perfectly opposite vectors (words with opposite meanings/associations) have a cosine similarity of -1, vectors that are 90 degrees different in orientation have a cosine similarity of 0, and vectors that match exactly (words with the same meanings/associations) have a cosine similarity of 1. The darker the cell on one of our heatmaps (the number is also written on it), the higher the cosine similarity between two words. 
  We created heatmaps that looked like the following for each genre, comparing female stereotypes to our women words, male stereotypes to our men words, and then vice versa with the female stereotypes to our men words and male stereotypes to women words. This enabled us to see how strong anticipated gender correlations were for certain words versus opposite gender correlations.   
- **Comparing female stereotypes to women words, and female Stereotypes to men words**
- ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/romance_female_heatmap.png)
+ **Comparing female stereotypes to women words**  
+ ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/romance_female_heatmap.png)  
+ **Comparing female stereotypes to men words**  
+ ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/romance_male_heatmap.png)  
  In the example above, we see that "whore", "virgin", "naive", "damsel", "maid", and "ideal" all have moderate-strong correlations with at least one female gender word, suggesting a linguistic association between the stereotype and words related to women in GoodReads romance reviews. We also see that the words "whore", "caring", and "sexy" also have moderate-strong correlations with at least one male gender word, suggesting that these words may not necessarily be female stereotypes alone. 
 
 ### Further Data Analysis: Analyzing Differences in Cosine Similarity 
