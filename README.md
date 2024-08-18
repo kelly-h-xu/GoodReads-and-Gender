@@ -71,7 +71,7 @@ We wanted to get a sense of the distribution of ratings depending on whether or 
 Next, we took the count of each gendered word within the tokenized review and developed a criteria based on weights to determine what constituted for a male/female-centered review. Gendered words that were unlikely to be caused by a typo, such as “him” and “his,” or “her” and “hers,” were assigned a higher weight of 2. Words that could easily be misspelled, such as “he” vs “her” or “mr” vs “mrs,” were assigned a lower weight of 1. We split the gendered words into male vs female lists (["he", "him", "his", "mr"] and ["her", "she", "hers", "mrs"]) and multiplied the occurrence of each word by its weight, resulting in two variables: a female and a male weight for each review. The final step was to simply classify the reviews based on which weight was higher. For example, if a review had a higher female weight, it would get classified as “0” (for female), otherwise as “1” (for male).   
 For each genre we considered, we compared the distributions of reviews classified as male vs female and considered the difference in the ratings given by a reviewer depending on whether their review was male or female focused. After classifying the reviews of each of our considered genres, in looking at the distribution of ratings by gender, it does not appear that female/male centered reviews tend to be more highly rated than the other—the distribution of ratings look roughly the same regardless of gender for each genre.   
 
-
+![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/all_ratings_graphs.png)  
 
 
 
