@@ -4,11 +4,11 @@
 We analyze book review data collected from 2006 to 2017 using Natural Language Processing techniques and find substantial evidence that book reviewers associate gendered words (viewing gender as a male or female binary for the purposes of this study) with certain gender stereotypes, and that these associations, along with the strength of association, vary by genre. We also examine the relationship between male or female centric reviews and their distribution of ratings, but find no significant correlation relating higher or lower ratings to a specific gender. 
 
 ## Project Overview
-👏 This project was created with Sarah Konrad, Sarah Ouda, Unzila Sakina, and Joyce Thomas.  
+👏 <ins>Team:</ins> This project was created with Sarah Konrad, Sarah Ouda, Unzila Sakina, and Joyce Thomas.  
 
-💻 Python with Word2Vec, NLTK Toolkit, and Sci-Kit Learn for Text Vectorization + Deep Learning. Pandas for data wrangling and data cleaning. Seaborn for data visualization.   
+💻 <ins>Tech:</ins> Python with Word2Vec, NLTK Toolkit, and Sci-Kit Learn for Text Vectorization + Deep Learning. Pandas for data wrangling and data cleaning. Seaborn for data visualization.   
 
-➡️ Limitations/Disclaimer: A big limitation in our linguistic analysis was viewing gender as a binary. Another significant limitation of our analysis was that we primarily confined ourselves to pronouns like she, him, his, hers, etc. to measure gender. However, there were many reviews in which these words did not appear, as review posters opted to call characters by their names instead.     
+➡️ <ins>Limitations/Disclaimer:</ins> A big limitation in our linguistic analysis was viewing gender as a binary. Another significant limitation of our analysis was that we primarily confined ourselves to pronouns like she, him, his, hers, etc. to measure gender. However, there were many reviews in which these words did not appear, as review posters opted to call characters by their names instead.     
 
    Another limitation is that cosine similarity is not a perfect measure of linguistic similarity, as the algorithm cannot fully capture the nuance behind human language. Furthermore, cosine similarity only captures a measure of similarity for the orientation of vectors, and it does not capture magnitude (ie. distance). Future work should also study the euclidean distance between word vectors to better understand how similar words are according to vectorization by looking at both the orientation and magnitude of vectors. 
 
