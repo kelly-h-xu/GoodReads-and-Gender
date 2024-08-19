@@ -58,13 +58,13 @@ To recreate our analysis, separately download the reviews datasets by genre (poe
 **How Much More Are Men Associated With Male Stereotypes, Than Women Are? (Romance Genre)**
 ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/romance_compare_male_to_female_bargraph.png)  
 
-## Results
-### Cross-Genre Analysis
+### Results
+#### Cross-Genre Analysis
    Visually analyzing genre-specific cosine similarity graphs, we found that association of gender with stereotypes varied somewhat by book genre. For our purposes, we considered a difference in cosine similarity greater than or equal to 0.05 to be significant evidence of correlation in a certain direction within the linguistic associations for a given genre, as it means that a minimum of a 5% greater cosine similarity was present, and such a percentage increase is not trivial given that thousands of words come between even a 0.01 cosine similarity increase given the size of vocabularies our Word2Vec models contained (each with a minimum of 80k words). This table shows the words that we observed a significant correlation in. 
 ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/cross_genre_analysis_1.png)
 ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/cross_genre_analysis_2.png) 
 
-### All Genres Analysis
+#### All Genres Analysis
    Performing the analysis on the entire dataset of gendered words and stereotypes across genres, and now designating a mean cosine similarity greater than or equal to 0.4 as showing strong correlation in either direction, we found that women are most strongly correlated with stereotypes of: witch, damsel, maid, and beautiful. Men are most strongly correlated with stereotypes of: heroic, soldier, hero, charismatic, and honorable (see appendix for the exact correlation numbers). This indicates that there are significant linguistic associations between anticipated gender stereotypes in literature and words indicating gender in GoodsReads reviews across genres. 
    **Overall Correlation of female stereotypes and female words**  
    ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/overall_compare_female_to_male_bargraph.png)  
