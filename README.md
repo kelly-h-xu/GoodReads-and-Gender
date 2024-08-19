@@ -22,7 +22,8 @@ For our project, we are using data from the “Goodreads Book Graph Datasets” 
 
 To recreate our analysis, separately download the reviews datasets by genre (poetry, mystery, romance, comics, and children's), and ensure they are in the same directory as the code that cleans the data. 
 
-## Methods 
+## Research Question 1: What words/qualities that are common in literary stereotypes and character tropes do GoodReads reviewers attribute or associate with male and female characters across genres? 
+
 ### Cleaning
    We began by converting all of the original JSON data files into Pandas dataframes, before filtering, segmenting, and exporting reviews into separate CSV by the genres that they were tagged with. The five genres we used were: children's, romance, mystery, comics, and poetry. We converted the CSVs back into Pandas dataframes and then filtered out the non-English reviews using the langdetect library. Then, to prepare the GoodReads reviews for vectorization (Word2Vec), we lowercased all words in the reviews, stripped them of all punctuation and numbers, removed random symbols, removed all stopwords as recommended by the NLTK documentation (words that are incredibly common and obfuscate associations ex. "to", "for", "the"), and lemmatized our texts with the NLTK lemmatizer so that all plurals were made singular and all verb tenses changed to simple present. 
 ### Building Word2Vec Models 
@@ -70,11 +71,14 @@ To recreate our analysis, separately download the reviews datasets by genre (poe
    **Overall Correlation of male stereotypes and male words**  
   ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/overall_compare_female_to_male_bargraph.png)  
 
-## Analyzing Impact of Gender Stereotypes on Ratings 
+## Research Question 2: How do ratings differ for female-centered vs. male-centered reviews per genre? 
 We wanted to get a sense of the distribution of ratings depending on whether or not a review was identified as male or female centered. In order to determine whether a review was male or female-centered, we developed a classification process utilizing the language of each review. We began by performing preliminary pre-processing on the text data, replacing the common contractions “she'll", "she'd", "he'll", and "he'd" with “she” and “he”. We then tokenized reviews by splitting them into a list of words and filtered for words that contain gendered language. Specifically, we searched for the presence of words such as "he", "him", "his", "mr", "her", "she", "hers", and "mrs". Within this filtered dataset, we standardized text by removing all forms of string punctuation and converting all words to lowercase.   
 
 Next, we took the count of each gendered word within the tokenized review and developed a criteria based on weights to determine what constituted for a male/female-centered review. Gendered words that were unlikely to be caused by a typo, such as “him” and “his,” or “her” and “hers,” were assigned a higher weight of 2. Words that could easily be misspelled, such as “he” vs “her” or “mr” vs “mrs,” were assigned a lower weight of 1. We split the gendered words into male vs female lists (["he", "him", "his", "mr"] and ["her", "she", "hers", "mrs"]) and multiplied the occurrence of each word by its weight, resulting in two variables: a female and a male weight for each review. The final step was to simply classify the reviews based on which weight was higher. For example, if a review had a higher female weight, it would get classified as “0” (for female), otherwise as “1” (for male).   
-For each genre we considered, we compared the distributions of reviews classified as male vs female and considered the difference in the ratings given by a reviewer depending on whether their review was male or female focused. After classifying the reviews of each of our considered genres, in looking at the distribution of ratings by gender, it does not appear that female/male centered reviews tend to be more highly rated than the other—the distribution of ratings look roughly the same regardless of gender for each genre.   
+For each genre we considered, we compared the distributions of reviews classified as male vs female and considered the difference in the ratings given by a reviewer depending on whether their review was male or female focused.     
+
+### Results
+After classifying the reviews of each of our considered genres, in looking at the distribution of ratings by gender, it does not appear that female/male centered reviews tend to be more highly rated than the other—the distribution of ratings look roughly the same regardless of gender for each genre.   
 
 ![](https://github.com/kelly-h-xu/GoodReads-and-Gender/blob/main/images/all_ratings_graphs.png)  
 
